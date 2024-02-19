@@ -1,0 +1,13 @@
+<h3 class="m-2">Your stupid coach says:</h3>
+
+<% if @question.include? "?"  %>
+  <p class="m-3"><strong><%= @answer = @answers[1] %></strong></p>
+      <% elsif @question == "I am going to work" %>
+    <p class="m-3"><strong><%= @answer = @answers[0] %></strong></p>
+     <% else %>
+     <p class="m-3"><strong><%= @answer = @answers[2] %></strong></p>
+    <% end %>
+
+
+
+    <%= link_to "Go back to the question form", ask_path, class: "btn btn-primary p-3 m-2" %>
